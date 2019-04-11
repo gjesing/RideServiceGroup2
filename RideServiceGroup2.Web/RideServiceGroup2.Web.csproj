@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RideServiceGroup2.DAL\RideServiceGroup2.DAL.csproj" />
     <ProjectReference Include="..\RideServiceGroup2.Entities\RideServiceGroup2.Entities.csproj" />
   </ItemGroup>
 

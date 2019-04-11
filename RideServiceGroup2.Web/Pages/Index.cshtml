@@ -5,7 +5,18 @@
 
 @using RideServiceGroup2.Entities
 
-@foreach (Ride ride in Model.rides)
-{
-}
+    @foreach (Ride ride in Model.rides)
+    {
+        <article>
+            <h3>@ride.Name</h3>
+            <hr>
+            <a href="">
+                <img src="@ride.ImgUrl" alt="@ride.Name">
+            </a>
+            <p>@ride.Description</p>
+            <div>
+                <p>Status: @ride.Status</p>
+            </div>
+        </article>
     }
+}

@@ -37,17 +37,17 @@ INSERT INTO RideCategories
 VALUES('Rutsjebane', 'Forlystelser som består af en bane med stejle fald, hvorår man kører i små vogne')
 
 INSERT INTO Rides
-VALUES('Orkanen', '/orkanen.jpg', 'Orkanen er en fantastisk og hæsblæsende rutsjebane for hele familien. Den har alt hvad adrenalinhungrende fartdjævle med hang til store højder og dybe fald tør drømme om!', '3', '1')
+VALUES('Orkanen', '/orkanen.jpg', 'Orkanen er en fantastisk og hæsblæsende rutsjebane for hele familien. Den har alt hvad adrenalinhungrende fartdjævle med hang til store højder og dybe fald tør drømme om!', '3', '0')
 INSERT INTO Rides
-VALUES('Vandcyklonen', '/vandcyklonen.jpg', 'Vandcyklonen er en rutsjebane, der med garanti gør dig plaskhamrende rundtosset. Spring om bord i den store 2-personers badering og hold godt fast, når det går susende rundt i en kæmpemæssig tragt, der pludselig ender brat i en… aaaaargh… stejl og mørk tunnel!','1', '1')
+VALUES('Vandcyklonen', '/vandcyklonen.jpg', 'Vandcyklonen er en rutsjebane, der med garanti gør dig plaskhamrende rundtosset. Spring om bord i den store 2-personers badering og hold godt fast, når det går susende rundt i en kæmpemæssig tragt, der pludselig ender brat i en… aaaaargh… stejl og mørk tunnel!','1', '0')
 INSERT INTO Rides
-VALUES('Snurretræet', '/snurretraeet.jpg', 'Træstammen vugger først stille og roligt frem og tilbage, men pludselig begynder den også at snurre rundt om sig selv - og så er det bare om at holde godt fast. Aaargh!', '2', '1')
+VALUES('Snurretræet', '/snurretraeet.jpg', 'Træstammen vugger først stille og roligt frem og tilbage, men pludselig begynder den også at snurre rundt om sig selv - og så er det bare om at holde godt fast. Aaargh!', '2', '0')
 
 INSERT INTO Reports
-VALUES('3', '2018-07-26', 'Virker ikke', '1');
+VALUES('1', '2018-07-26', 'Virker ikke', '1');
 INSERT INTO Reports
 VALUES('2', '2018-07-27', 'Vi arbejder på sagen', '1');
 INSERT INTO Reports
-VALUES('1', '2018-07-30', 'Forlystelsen virker igen', '1');
+VALUES('0', '2018-07-30', 'Forlystelsen virker igen', '1');
 
 

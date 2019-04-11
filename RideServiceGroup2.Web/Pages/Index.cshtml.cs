@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RideServiceGroup2.Entities;
+using RideServiceGroup2.DAL;
 
 namespace RideServiceGroup2.Web.Pages
 {
@@ -13,7 +14,9 @@ namespace RideServiceGroup2.Web.Pages
         public List<Ride> rides { get; set; }
         public void OnGet()
         {
+            RideRepository rideRepository = new RideRepository();
 
+            rides = rideRepository.GetAllRides();
         }
     }
 }

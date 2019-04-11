@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideServiceGroup2.Web", "RideServiceGroup2.Web\RideServiceGroup2.Web.csproj", "{A265F581-3828-4728-B41B-47CF7DE671E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideServiceGroup2.Web", "RideServiceGroup2.Web\RideServiceGroup2.Web.csproj", "{A265F581-3828-4728-B41B-47CF7DE671E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideServiceGroup2.Entities", "RideServiceGroup2.Entities\RideServiceGroup2.Entities.csproj", "{5EF538B2-4D92-4C86-8486-7E8315FD30E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideServiceGroup2.Entities", "RideServiceGroup2.Entities\RideServiceGroup2.Entities.csproj", "{5EF538B2-4D92-4C86-8486-7E8315FD30E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideServiceGroup2.DAL", "RideServiceGroup2.DAL\RideServiceGroup2.DAL.csproj", "{31CAB412-B7DB-48A6-9F6B-0EB013DE7462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RideServiceGroup2.DAL", "RideServiceGroup2.DAL\RideServiceGroup2.DAL.csproj", "{31CAB412-B7DB-48A6-9F6B-0EB013DE7462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

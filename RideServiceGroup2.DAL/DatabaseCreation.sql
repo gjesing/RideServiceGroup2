@@ -17,7 +17,6 @@ CREATE TABLE Rides(
 	Name nvarchar(50) NOT NULL,
 	ImgUrl nvarchar(50) NOT NULL,
 	Description nvarchar(MAX) NOT NULL,
-	ShortDescription nvarchar(50) NOT NULL,
 	CategoryId INT FOREIGN KEY REFERENCES RideCategories(RideCategoryId) NOT NULL,
 	Status INT NOT NULL
 );
@@ -38,11 +37,11 @@ INSERT INTO RideCategories
 VALUES('Rutsjebane', 'Forlystelser som består af en bane med stejle fald, hvorår man kører i små vogne')
 
 INSERT INTO Rides
-VALUES('Orkanen', '/orkanen.jpg', 'Orkanen er en fantastisk og hæsblæsende rutsjebane for hele familien. Den har alt hvad adrenalinhungrende fartdjævle med hang til store højder og dybe fald tør drømme om!','Orkanen giver dig en tur, du aldrig glemmer', '3', '1')
+VALUES('Orkanen', '/orkanen.jpg', 'Orkanen er en fantastisk og hæsblæsende rutsjebane for hele familien. Den har alt hvad adrenalinhungrende fartdjævle med hang til store højder og dybe fald tør drømme om!', '3', '1')
 INSERT INTO Rides
-VALUES('Vandcyklonen', '/vandcyklonen.jpg', 'Vandcyklonen er en rutsjebane, der med garanti gør dig plaskhamrende rundtosset. Spring om bord i den store 2-personers badering og hold godt fast, når det går susende rundt i en kæmpemæssig tragt, der pludselig ender brat i en… aaaaargh… stejl og mørk tunnel!', 'Spring om bord i en stor 2-personers badering','1', '1')
+VALUES('Vandcyklonen', '/vandcyklonen.jpg', 'Vandcyklonen er en rutsjebane, der med garanti gør dig plaskhamrende rundtosset. Spring om bord i den store 2-personers badering og hold godt fast, når det går susende rundt i en kæmpemæssig tragt, der pludselig ender brat i en… aaaaargh… stejl og mørk tunnel!','1', '1')
 INSERT INTO Rides
-VALUES('Snurretræet', '/snurretraeet.jpg', 'Træstammen vugger først stille og roligt frem og tilbage, men pludselig begynder den også at snurre rundt om sig selv - og så er det bare om at holde godt fast. Aaargh!', 'Kæmpe træstamme, der snurrer rundt om sig selv', '2', '1')
+VALUES('Snurretræet', '/snurretraeet.jpg', 'Træstammen vugger først stille og roligt frem og tilbage, men pludselig begynder den også at snurre rundt om sig selv - og så er det bare om at holde godt fast. Aaargh!', '2', '1')
 
 INSERT INTO Reports
 VALUES('3', '2018-07-26', 'Virker ikke', '1');

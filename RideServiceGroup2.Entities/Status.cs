@@ -6,8 +6,8 @@ namespace RideServiceGroup2.Entities
 {
     public enum Status
     {
-        Working,
-        Broken,
-        BeingRepaired
+        Working = 1,
+        Broken = 2,
+        BeingRepaired = 3
     }
 }

@@ -14,11 +14,18 @@ namespace RideServiceGroup2.Entities
         {
             get { return Reports[0].Status; }
         }
-
         public List<Report> Reports { get; set; }
         public int NumberOfShutdowns()
         {
-            throw new NotImplementedException();
+            int numberOfShutDowns = 0;
+            foreach (Report report in Reports)
+            {
+                if (report.Status == Status.Broken)
+                {
+                    numberOfShutDowns++;
+                }
+            }
+            return numberOfShutDowns;
         }
         public int DaysSinceLastShutdown()
         {

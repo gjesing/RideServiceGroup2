@@ -29,7 +29,17 @@ namespace RideServiceGroup2.Entities
         }
         public int DaysSinceLastShutdown()
         {
-            throw new NotImplementedException();
+            DateTime lastShutdown = new DateTime();
+            foreach (Report report in Reports)
+            {
+                if (report.Status == Status.Broken)
+                {
+                    lastShutdown = report.ReportTime;
+                    break;
+                }
+            }
+            TimeSpan timeSinceLastShutdown = DateTime.Now - lastShutdown;
+            return timeSinceLastShutdown.Days;
         }
         public string GetShortDescription()
         {

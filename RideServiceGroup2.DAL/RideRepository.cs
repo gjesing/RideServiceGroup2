@@ -34,8 +34,8 @@ namespace RideServiceGroup2.DAL
             foreach (Ride ride in rides)
             {
                 ride.Reports = reportRepository.GetReportsFor(ride.Id);
-            }
 
+            }
 
 
             return rides;

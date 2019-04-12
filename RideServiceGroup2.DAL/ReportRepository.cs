@@ -29,6 +29,7 @@ namespace RideServiceGroup2.DAL
                     ReportTime = reportTime,
                     Notes = notes
                 };
+                reports.Add(report);
             }
 
             return reports;

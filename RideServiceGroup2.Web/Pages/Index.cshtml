@@ -3,7 +3,7 @@
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 
-@using RideServiceGroup2.Entities
+    @using RideServiceGroup2.Entities
 
     @foreach (Ride ride in Model.rides)
     {
@@ -13,10 +13,11 @@
             <a href="">
                 <img src="@ride.ImgUrl" alt="@ride.Name">
             </a>
-            <p>@ride.Description</p>
+            <p>@ride.GetShortDescription()</p>
             <div>
-                <p>Status: @ride.Status</p>
+                <p>Status: @ride.TranslateStatus()</p>
             </div>
+
         </article>
     }
 }

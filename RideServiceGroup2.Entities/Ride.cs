@@ -12,7 +12,17 @@ namespace RideServiceGroup2.Entities
         public RideCategory Category { get; set; }
         public Status Status
         {
-            get { return Reports[0].Status; }
+            get
+            {
+                if (Reports.Count > 0)
+                {
+                    return Reports[0].Status;
+                }
+                else
+                {
+                    return Status.Working;
+                }
+            }
         }
         public List<Report> Reports { get; set; }
         public int NumberOfShutdowns()
@@ -44,6 +54,24 @@ namespace RideServiceGroup2.Entities
         public string GetShortDescription()
         {
             return Description.Substring(0, 50) + "...";
+        }
+
+        public string TranslateStatus()
+        {
+            string status = "";
+            switch(Status)
+                {
+                    case Status.Working:
+                        status = "Virker";
+                break;
+                    case Status.Broken:
+                        status = "Virker ikke";
+                break;
+                    case Status.BeingRepaired:
+                        status = "Under reperation";
+                break;
+            }
+            return status;
         }
     }
 }

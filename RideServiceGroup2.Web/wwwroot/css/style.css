@@ -86,12 +86,26 @@ main {
         margin: 1%;
     }
 
+        main article a {
+            text-decoration: none;
+        }
+
+        main article a:hover, main article a:active {
+            text-decoration: underline;
+        }
+
+        main article a:hover img, main article a:active img {
+            opacity: .7;
+        }
+
         main article img {
             width: 100%;
+            transition: .5s all;
         }
 
         main article h3 {
             color: #777;
+            transition: .5s all;
         }
 
 .index a {
@@ -107,6 +121,7 @@ main {
     width: 98%;
     display: flex;
     justify-content: space-around;
+    margin: 100px 0;
 }
 
     .productView img {
@@ -121,7 +136,7 @@ main {
     }
 
         .productView div h1 {
-            color: #ddd;
+            color: #777777;
             margin-bottom: 0;
         }
 

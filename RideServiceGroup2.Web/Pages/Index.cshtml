@@ -8,9 +8,11 @@
     @foreach (Ride ride in Model.rides)
     {
         <article>
-            <h3>@ride.Name</h3>
+            <a href="Ride/@ride.Id">
+                <h3>@ride.Name</h3>
+            </a>
             <hr>
-            <a href="">
+            <a href="Ride/@ride.Id">
                 <img src="@ride.ImgUrl" alt="@ride.Name">
             </a>
             <p>@ride.GetShortDescription()</p>

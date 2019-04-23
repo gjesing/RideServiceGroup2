@@ -90,8 +90,8 @@ main {
             text-decoration: none;
         }
 
-        main article a:hover, main article a:active {
-            text-decoration: underline;
+        main article a:hover h3, main article a:active h3 {
+            color: #000000;
         }
 
         main article a:hover img, main article a:active img {

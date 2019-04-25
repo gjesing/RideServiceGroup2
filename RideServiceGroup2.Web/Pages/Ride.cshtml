@@ -1,9 +1,19 @@
-﻿@page
+﻿@page "{id:int}"
 @model RideServiceGroup2.Web.Pages.RideModel
 @{
     ViewData["Title"] = "Ride";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h2>Ride</h2>
-
+<article class="productView">
+    <img src="~/@Model.Ride.ImgUrl" alt="@Model.Ride.Name" />
+    <div>
+        <h1>@Model.Ride.Name</h1>
+        <p>@Model.Ride.Category.Name</p>
+        <hr />
+        <p>Status: @Model.Ride.TranslateStatus()</p>
+        <p>@Model.Ride.Description</p>
+        <p>Antal nedbrud: @Model.Ride.NumberOfShutdowns()</p>
+        <p>Dage siden seneste nedbrud: @Model.Ride.DaysSinceLastShutdown()</p>
+    </div>
+</article>

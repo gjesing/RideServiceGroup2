@@ -8,6 +8,27 @@ namespace RideServiceGroup2.DAL
 {
     class ReportRepository : BaseRepository
     {
+        public List<Report> GetAllReports()
+        {
+            List<Report> reports = new List<Report>();
+            DataTable reportsTable = ExecuteQuery($"SELECT * FROM Reports");
+            foreach (DataRow row in reportsTable.Rows)
+            {
+                int reportId = (int)row["ReportId"];
+                Status status = (Status)row["Status"];
+                DateTime reportTime = (DateTime)row["reportTime"];
+                string notes = (string)row["Notes"];
+                Report report = new Report()
+                {
+                    Id = reportId,
+                    Status = status,
+                    ReportTime = reportTime,
+                    Notes = notes
+                };
+                reports.Add(report);
+            }
+            return reports;
+        }
         public List<Report> GetReportsFor(int id)
         {
             List<Report> reports = new List<Report>();

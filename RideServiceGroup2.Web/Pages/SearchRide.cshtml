@@ -1,0 +1,46 @@
+﻿@page
+@model RideServiceGroup2.Web.Pages.SearchRideModel
+@{
+    ViewData["Title"] = "SearchRide";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@using RideServiceGroup2.Entities
+<article>
+    <form>
+        <fieldset>
+            <legend>Søg efter forlystelse</legend>
+            <label for="name">Navn:</label>
+            <input type="text" name="name" placeholder="Indtast navn på forlystelse" autofocus /><br />
+
+            <label for="category">Kategori:</label>
+            <input type="text" name="category" placeholder="Indtast kategori" /><br />
+
+            <label for="status">Status:</label>
+            <select name="status">
+                <option value="0" selected>Alle</option>
+                <option value="1">Virker</option>
+                <option value="2">Virker ikke</option>
+                <option value="3">Under reperation</option>
+            </select><br />
+
+            <input type="submit" value="Søg" />
+        </fieldset>
+    </form>
+</article>
+
+
+@foreach (Ride ride in Model.rides)
+{
+    <article>
+        <h3>@ride.Name</h3>
+        <hr>
+        <a href="">
+            <img src="@ride.ImgUrl" alt="@ride.Name">
+        </a>
+        <p>@ride.GetShortDescription()</p>
+        <div>
+            <p>Status: @ride.TranslateStatus()</p>
+        </div>
+    </article>
+}
+

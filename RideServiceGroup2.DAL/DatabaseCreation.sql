@@ -31,7 +31,7 @@ GO
 INSERT INTO RideCategories
 VALUES('Vandforlystelse', 'Forlystelser med vand')
 INSERT INTO RideCategories
-VALUES('Pendulforlystele', 'Forlystelser der gynger frem og tilbage')
+VALUES('Pendulforlystelse', 'Forlystelser der gynger frem og tilbage')
 INSERT INTO RideCategories
 VALUES('Rutsjebane', 'Forlystelser som består af en bane med stejle fald, hvorår man kører i små vogne')
 

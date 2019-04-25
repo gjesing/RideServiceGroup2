@@ -2,7 +2,6 @@
 @model RideServiceGroup2.Web.Pages.IndexModel
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
-
     @using RideServiceGroup2.Entities
 
     @foreach (Ride ride in Model.rides)
@@ -17,7 +16,6 @@
             <div>
                 <p>Status: @ride.TranslateStatus()</p>
             </div>
-
         </article>
     }
 }

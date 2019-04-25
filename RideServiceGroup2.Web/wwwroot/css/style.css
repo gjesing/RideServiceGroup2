@@ -81,6 +81,20 @@ main {
     padding: 0 15%;
 }
 
+    main form legend{
+        font-size: 1.2rem;
+    }
+
+    main form input{
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    main form select {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
     main article {
         width: 31%;
         margin: 1%;

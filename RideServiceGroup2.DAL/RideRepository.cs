@@ -28,7 +28,7 @@ namespace RideServiceGroup2.DAL
                     Name = name,
                     ImgUrl = imgUrl,
                     Description = description,
-                    Category = categoryRepo.GetCategory(id)
+                    Category = categoryRepo.GetCategory(categoryId)
                 };
                 rides.Add(ride);
             }

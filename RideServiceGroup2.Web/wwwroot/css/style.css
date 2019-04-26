@@ -163,6 +163,11 @@ main {
         color: #777;
     }
 
+    .addProducts textarea {
+        height: 100px;
+        width: 300px;
+    }
+
 
 footer ul {
     list-style: none;

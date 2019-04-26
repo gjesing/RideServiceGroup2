@@ -39,5 +39,19 @@ namespace RideServiceGroup2.DAL
                 Description = description
             };
         }
+        public RideCategory GetCategory(string categoryName)
+        {
+            DataTable categoriesTable = ExecuteQuery($"SELECT * FROM RideCategories WHERE Name = {categoryName}");
+            DataRow categoriesRow = categoriesTable.Rows[0];
+            int id = (int)categoriesRow["RideCategoryId"];
+            string name = (string)categoriesRow["Name"];
+            string description = (string)categoriesRow["Description"];
+            return new RideCategory()
+            {
+                Id = id,
+                Name = name,
+                Description = description
+            };
+        }
     }
 }

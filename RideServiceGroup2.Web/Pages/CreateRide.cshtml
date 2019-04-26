@@ -1,0 +1,35 @@
+﻿@page
+@using RideServiceGroup2.Entities;
+@model RideServiceGroup2.Web.Pages.CreateRideModel
+@{
+    ViewData["Title"] = "CreateRide";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="addProducts">
+    <h2>Opret forlystelse</h2>
+    <form action="Index" method="post">
+        @Html.AntiForgeryToken()
+        <label for="Ride.Name">Navn:</label>
+        <input type="text" name="Ride.Name" />
+        <br />
+        <label for="Ride.ImgUrl">Navn på billede:</label>
+        <input type="text" name="Ride.ImgUrl" placeholder="Fx orkanen.jpg" />
+        <br />
+        <label for="Ride.Category">Kategori:</label>
+        <select name="Ride.Category">
+            @{
+                foreach (RideCategory category in Model.Categories)
+                {
+                    <option value="@category.Name">@category.Name</option>
+                }
+            }
+        </select>
+        <br />
+        <label for="Ride.Description">Beskrivelse:</label>
+        <br />
+        <textarea name="Ride.Description"></textarea>
+        <br />
+        <input type="submit" value="Opret" />
+    </form>
+</div>

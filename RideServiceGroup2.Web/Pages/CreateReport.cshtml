@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model RideServiceGroup2.Web.Pages.CreateReportModel
+@{
+    ViewData["Title"] = "CreateReport";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<article>
+    <h2>Opret rapport for @Model.Ride.Name</h2>
+    <form action="/Ride/@Model.Ride.Id">
+        <label for="status">Vælg status:</label>
+        <select name="status">
+            <option value="Working">Virker</option>
+            <option value="Broken">Virker ikke</option>
+            <option value="BeingRepaired">Under reperation</option>
+        </select><br /> 
+        <label for="date">Dato:</label>
+        <input type="date" name="date" value="" required/><br />
+        <label for="text">Skriv rapport her:</label>
+        <textarea name="text" cols="60" rows="10" required></textarea>
+        <input type="submit" name="name" value="Opret" />
+    </form>
+</article>

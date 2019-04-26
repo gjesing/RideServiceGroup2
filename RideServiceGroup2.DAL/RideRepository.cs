@@ -40,5 +40,26 @@ namespace RideServiceGroup2.DAL
 
             return rides;
         }
+        public Ride GetRide(int id)
+        {
+            string sql = $"SELECT * FROM Rides WHERE RideId = {id}";
+
+            DataTable table = ExecuteQuery(sql);
+            DataRow row = table.Rows[0];
+            Ride ride = new Ride()
+            {
+                Id = (int)row["RideId"],
+                Name = (string)row["Name"],
+                ImgUrl = (string)row["ImgUrl"],
+                Description = (string)row["Description"],
+            };
+            CategoryRepository categoryRepo = new CategoryRepository();
+            ride.Category = categoryRepo.GetCategory(ride.Id);
+
+            ReportRepository reportRepo = new ReportRepository();
+            ride.Reports = reportRepo.GetReportsFor(ride.Id);
+
+            return ride;
+        }
     }
 }

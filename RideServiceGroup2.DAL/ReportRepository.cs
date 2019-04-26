@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RideServiceGroup2.DAL
 {
-    class ReportRepository : BaseRepository
+    public class ReportRepository : BaseRepository
     {
         public List<Report> GetAllReports()
         {
@@ -54,6 +54,11 @@ namespace RideServiceGroup2.DAL
             }
 
             return reports;
+        }
+        public void CreateReport(Report report)
+        {
+            string sql = $"INSERT INTO Reports VALUES('{report.Status}', '{report.ReportTime}', '{report.Notes}', '{report.Ride.Id}')";
+            ExecuteNonQuery(sql);
         }
     }
 }

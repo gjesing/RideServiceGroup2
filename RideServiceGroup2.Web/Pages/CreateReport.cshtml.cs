@@ -36,9 +36,9 @@ namespace RideServiceGroup2.Web.Pages
                 Notes = text,
                 ReportTime = date
             };
-
-            ReportRepository reportRepo = new ReportRepository();
-            reportRepo.CreateReport(report);
+            
+            //ReportRepository reportRepo = new ReportRepository();
+            //reportRepo.CreateReport(report);
         }
     }
 }

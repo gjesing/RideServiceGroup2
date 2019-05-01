@@ -50,7 +50,6 @@ namespace RideServiceGroup2.Entities
                 if (report.Status == Status.Broken)
                 {
                     lastShutdown = report.ReportTime;
-                    break;
                 }
             }
             TimeSpan timeSinceLastShutdown = DateTime.Now - lastShutdown;

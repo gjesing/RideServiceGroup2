@@ -2,34 +2,36 @@
 @using RideServiceGroup2.Entities;
 @model RideServiceGroup2.Web.Pages.CreateRideModel
 @{
-    ViewData["Title"] = "CreateRide";
+    ViewData["Title"] = "Opret Forlystelse";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <div class="addProducts">
     <h2>Opret forlystelse</h2>
-    <form action="Index" method="post">
+    <form method="post">
         @Html.AntiForgeryToken()
-        <label for="Ride.Name">Navn:</label>
-        <input type="text" name="Ride.Name" />
+        <label asp-for="Ride.Name"></label>
+        <input asp-for="Ride.Name" />
         <br />
-        <label for="Ride.ImgUrl">Navn på billede:</label>
-        <input type="text" name="Ride.ImgUrl" placeholder="Fx orkanen.jpg" />
+        <label asp-for="Ride.ImgUrl"></label>
+        <input asp-for="Ride.ImgUrl" placeholder="Fx orkanen.jpg" />
         <br />
-        <label for="Ride.Category">Kategori:</label>
-        <select name="Ride.Category">
+        <label asp-for="Ride.Category"></label>
+        <select asp-for="CategoryId">
             @{
                 foreach (RideCategory category in Model.Categories)
                 {
-                    <option value="@category.Name">@category.Name</option>
+                    <option value="@category.Id">@category.Name</option>
                 }
             }
         </select>
         <br />
-        <label for="Ride.Description">Beskrivelse:</label>
+        <label asp-for="Ride.Description"></label>
         <br />
-        <textarea name="Ride.Description"></textarea>
+        <textarea asp-for="Ride.Description"></textarea>
         <br />
         <input type="submit" value="Opret" />
     </form>
+    <p>@Model.Message</p>
 </div>

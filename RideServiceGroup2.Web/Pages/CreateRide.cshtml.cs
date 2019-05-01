@@ -13,7 +13,11 @@ namespace RideServiceGroup2.Web.Pages
     {
         [BindProperty]
         public Ride Ride { get; set; }
+        [BindProperty]
         public List<RideCategory> Categories { get; set; }
+        [BindProperty]
+        public int CategoryId { get; set; }
+        public string Message { get; set; }
         public void OnGet()
         {
             CategoryRepository categoryRepo = new CategoryRepository();
@@ -22,12 +26,11 @@ namespace RideServiceGroup2.Web.Pages
         public void OnPost()
         {
             CategoryRepository categoryRepo = new CategoryRepository();
-            Ride = new Ride()
-            {
-                Name = Ride.Name,
-                ImgUrl = Ride.ImgUrl,
-                Description = Ride.Description
-            };
+            Categories = categoryRepo.GetAllRideCategories();
+            Ride.Category = categoryRepo.GetCategory(CategoryId);
+            RideRepository rideRepo = new RideRepository();
+            rideRepo.CreateRide(Ride);
+            Message = $"Forlystelsen {Ride.Name} er oprettet";
         }
     }
 }

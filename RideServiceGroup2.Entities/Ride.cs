@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RideServiceGroup2.Entities
 {
     public class Ride
     {
         public int Id { get; set; }
+        [Display(Name = "Navn")]
         public string Name { get; set; }
+        [Display(Name = "Billede")]
         public string ImgUrl { get; set; }
+        [Display(Name = "Beskrivelse")]
         public string Description { get; set; }
+        [Display(Name = "Kategori")]
         public RideCategory Category { get; set; }
         public Status Status
         {
@@ -24,7 +29,7 @@ namespace RideServiceGroup2.Entities
                 }
             }
         }
-        public List<Report> Reports { get; set; }
+        public List<Report> Reports { get; set; } = new List<Report>();
         public int NumberOfShutdowns()
         {
             int numberOfShutDowns = 0;

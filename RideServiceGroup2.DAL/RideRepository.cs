@@ -40,5 +40,9 @@ namespace RideServiceGroup2.DAL
 
             return rides;
         }
+        public void CreateRide(Ride ride)
+        {
+            ExecuteNonQuery($"INSERT INTO Rides VALUES('{ride.Name}', 'img/{ride.ImgUrl}', '{ride.Description}', '{ride.Category.Id}')");
+        }
     }
 }

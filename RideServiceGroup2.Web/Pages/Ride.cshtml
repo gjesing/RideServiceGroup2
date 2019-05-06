@@ -1,4 +1,5 @@
 ﻿@page "{id:int}"
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model RideServiceGroup2.Web.Pages.RideModel
 @{
     ViewData["Title"] = "Ride";
@@ -15,5 +16,8 @@
         <p>@Model.Ride.Description</p>
         <p>Antal nedbrud: @Model.Ride.NumberOfShutdowns()</p>
         <p>Dage siden seneste nedbrud: @Model.Ride.DaysSinceLastShutdown()</p>
+        <br />
+        <a href="#">Slet</a>
+        <a href="#">Rediger</a>
     </div>
 </article>

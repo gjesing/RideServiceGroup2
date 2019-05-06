@@ -81,11 +81,11 @@ main {
     padding: 0 15%;
 }
 
-    main form legend{
+    main form legend {
         font-size: 1.2rem;
     }
 
-    main form input{
+    main form input {
         padding: 5px;
         margin-bottom: 10px;
     }
@@ -104,13 +104,13 @@ main {
             text-decoration: none;
         }
 
-        main article a:hover h3, main article a:active h3 {
-            color: #000000;
-        }
+            main article a:hover h3, main article a:active h3 {
+                color: #000000;
+            }
 
-        main article a:hover img, main article a:active img {
-            opacity: .7;
-        }
+            main article a:hover img, main article a:active img {
+                opacity: .7;
+            }
 
         main article img {
             width: 100%;
@@ -121,6 +121,15 @@ main {
             color: #777;
             transition: .5s all;
         }
+
+#weather p {
+    font-size: 3em;
+    margin: 0;
+}
+
+#weather img {
+    width: 30%;
+}
 
 .index a {
     text-decoration: none;
@@ -153,6 +162,17 @@ main {
             color: #777777;
             margin-bottom: 0;
         }
+
+    .productView a {
+        color: #ffffff;
+        background: #777777;
+        padding: 7px 12px;
+        transition: all .5s;
+    }
+
+    .productView a:hover, .productView a:active {
+        background: #aaaaaa;
+    }
 
 .addProducts {
     display: block;

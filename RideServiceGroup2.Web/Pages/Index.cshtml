@@ -4,7 +4,13 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
     @using RideServiceGroup2.Entities
 
-    @foreach (Ride ride in Model.rides)
+    <article id="weather">
+        <h3>Vejret nu</h3>
+        <hr />
+        <img src="@Model.Weather.Weather[0].GetIconUrl()" alt="@Model.Weather.Weather[0].Description" />
+        <p>@Model.Weather.Main.Temp</p>
+    </article>
+    @foreach (Ride ride in Model.Rides)
     {
         <article>
             <a href="Ride/@ride.Id">

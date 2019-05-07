@@ -17,7 +17,7 @@
         <p>Antal nedbrud: @Model.Ride.NumberOfShutdowns()</p>
         <p>Dage siden seneste nedbrud: @Model.Ride.DaysSinceLastShutdown()</p>
         <br />
-        <a href="#">Slet</a>
-        <a href="#">Rediger</a>
+        <button formmethod="post" asp-page-handler="Delete">Slet</button>
+        <a asp-page="CreateRide/@Model.Ride.Id" asp-page-handler="Edit">Rediger</a>
     </div>
 </article>

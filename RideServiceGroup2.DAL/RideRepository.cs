@@ -44,5 +44,9 @@ namespace RideServiceGroup2.DAL
         {
             ExecuteNonQuery($"INSERT INTO Rides VALUES('{ride.Name}', 'img/{ride.ImgUrl}', '{ride.Description}', '{ride.Category.Id}')");
         }
+        public void DeleteRide(Ride ride)
+        {
+            ExecuteNonQuery($"");
+        }
     }
 }

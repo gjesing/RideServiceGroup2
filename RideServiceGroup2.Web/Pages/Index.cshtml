@@ -1,29 +1,29 @@
 ﻿@page
+@using RideServiceGroup2.Entities
 @model RideServiceGroup2.Web.Pages.IndexModel
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
-    @using RideServiceGroup2.Entities
+}
 
-    <article id="weather">
-        <h3>Vejret nu</h3>
-        <hr />
-        <img src="@Model.Weather.Weather[0].GetIconUrl()" alt="@Model.Weather.Weather[0].Description" />
-        <p>@Model.Weather.Main.Temp</p>
+<article id="weather">
+    <h3>Vejret nu</h3>
+    <hr />
+    <img src="@Model.Weather.Weather[0].GetIconUrl()" alt="@Model.Weather.Weather[0].Description" />
+    <p>@Math.Round(Model.Weather.Main.Temp)°</p>
+</article>
+@foreach (Ride ride in Model.Rides)
+{
+    <article>
+        <a href="Ride/@ride.Id">
+            <h3>@ride.Name</h3>
+        </a>
+        <hr>
+        <a href="Ride/@ride.Id">
+            <img src="@ride.ImgUrl" alt="@ride.Name">
+        </a>
+        <p>@ride.GetShortDescription()</p>
+        <div>
+            <p>Status: @ride.TranslateStatus()</p>
+        </div>
     </article>
-    @foreach (Ride ride in Model.Rides)
-    {
-        <article>
-            <a href="Ride/@ride.Id">
-                <h3>@ride.Name</h3>
-            </a>
-            <hr>
-            <a href="Ride/@ride.Id">
-                <img src="@ride.ImgUrl" alt="@ride.Name">
-            </a>
-            <p>@ride.GetShortDescription()</p>
-            <div>
-                <p>Status: @ride.TranslateStatus()</p>
-            </div>
-        </article>
-    }
 }

@@ -17,16 +17,25 @@ namespace RideServiceGroup2.Web.Pages
         public List<RideCategory> Categories { get; set; }
         [BindProperty]
         public int CategoryId { get; set; }
+        public string PageHandler { get; set; }
         public string Message { get; set; }
-        public void OnGet()
+        public CreateRideModel()
         {
             CategoryRepository categoryRepo = new CategoryRepository();
             Categories = categoryRepo.GetAllRideCategories();
         }
+        public void OnGet()
+        {
+            PageHandler = "Opret Forlystelse";
+        }
+        public void OnGetDelete()
+        {
+            PageHandler = "Slet Forlystelse";
+        }
         public void OnPost()
         {
+            PageHandler = "Opret Forlystelse";
             CategoryRepository categoryRepo = new CategoryRepository();
-            Categories = categoryRepo.GetAllRideCategories();
             Ride.Category = categoryRepo.GetCategory(CategoryId);
             RideRepository rideRepo = new RideRepository();
             rideRepo.CreateRide(Ride);
